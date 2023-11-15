@@ -9,7 +9,7 @@ import re
 #variaveis universais
 #1+1=2
 line = ('------------------------------------------------')
-tamSenha = 1                                                # Tamanho minimo senha
+tamSenha = 6                                                # Tamanho minimo senha
 limiteErroSenha = 3                                         # Quantas tentativas até bloquear a conta
 acessoLimitado = 0                                          # Limitador de acesso (0 = falso 1 = verdadeiro)
 cadastrado = 0                                              # 
@@ -122,9 +122,9 @@ def cadastro():
         if email == "":
             print('EMAIL NÃO PODE ESTAR EM BRANCO')
             email=input('CADASTRAR EMAIL:\t\t')
-##        elif check(email)==False:
-##            print('FORMATO INVALIDO, USE SOMENTE NOME@EXEMPLO.COM')
-##            email=input('CADASTRAR EMAIL:\t\t')
+        elif check(email)==False:
+            print('FORMATO INVALIDO, USE SOMENTE NOME@EXEMPLO.COM')
+            email=input('CADASTRAR EMAIL:\t\t')
         else:
             
             break
